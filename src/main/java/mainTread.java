@@ -12,7 +12,26 @@ public class mainTread {
     static Timer timerServersTest = new Timer(timerPeriod, new TimerActivationEvents());
 
     public static void main(String[] args) {
+        addImageToTray();
+        timerServersTest.start();
+    }
 
+    private static void addImageToTray(){
+        SystemTray systemTray = SystemTray.getSystemTray();
+        Image image = getImageTray(true);
+        PopupMenu popup = trayAppPopupMenu();
+
+        trayIcon = new TrayIcon(image);
+        trayIcon.setImageAutoSize(true);
+        trayIcon.setPopupMenu(popup);
+        try {
+            systemTray.add(trayIcon);
+        } catch (AWTException ex) {
+            Logger.getLogger(mainTread.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    private static PopupMenu trayAppPopupMenu(){
         PopupMenu popup = new PopupMenu();
 
         MenuItem authenticationItem = new MenuItem("Авторизация");
@@ -31,18 +50,7 @@ public class mainTread {
         exitItem.addActionListener(new ExitButtonClick());
         popup.add(exitItem);
 
-        SystemTray systemTray = SystemTray.getSystemTray();
-        Image image = getImageTray(true);
-
-        trayIcon = new TrayIcon(image);
-        trayIcon.setImageAutoSize(true);
-        trayIcon.setPopupMenu(popup);
-        try {
-            systemTray.add(trayIcon);
-        } catch (AWTException ex) {
-            Logger.getLogger(mainTread.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        timerServersTest.start();
+        return popup;
     }
 
     private static Image getImageTray(Boolean isGood){

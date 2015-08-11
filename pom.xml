@@ -14,7 +14,7 @@
         <jdk.version>1.8</jdk.version>
     </properties>
 
-    <build>
+    <!--<build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -39,7 +39,7 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
 
     <dependencies>
         <!--Библиотеки cucumber-->
@@ -61,12 +61,12 @@
             <version>1.2.4</version>
             <scope>test</scope>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
-        </dependency>-->
+        </dependency>
         <!--//Библиотетки календаря-->
         <dependency>
             <groupId>com.google.api-client</groupId>
@@ -88,7 +88,6 @@
             <artifactId>google-oauth-client-jetty</artifactId>
             <version>1.20.0</version>
         </dependency>
-
     </dependencies>
 
 </project>
