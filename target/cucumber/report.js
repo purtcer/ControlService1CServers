@@ -1,109 +1,109 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Notifications/EventsSettingsStorageBehaviour");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("ServerAuthentication/ServerAuthenticationFormBehaviour");
 formatter.feature({
   "line": 1,
-  "name": "EventsSettingsStorage",
-  "description": "\r\nAs a user\r\nI want to save my settings for notifications",
-  "id": "eventssettingsstorage",
+  "name": "ServerAuthenticationFormWork",
+  "description": "\r\nAs a user\r\nI want to save my settings for server authentication from settings form",
+  "id": "serverauthenticationformwork",
   "keyword": "Feature"
 });
 formatter.scenario({
   "line": 6,
-  "name": "Save settings",
+  "name": "Restore settings",
   "description": "",
-  "id": "eventssettingsstorage;save-settings",
+  "id": "serverauthenticationformwork;restore-settings",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
   "line": 7,
-  "name": "application is not run",
+  "name": "form settings is not run",
   "keyword": "Given "
 });
 formatter.step({
   "line": 8,
-  "name": "I run application",
+  "name": "I run form settings",
   "keyword": "When "
 });
 formatter.step({
   "line": 9,
-  "name": "app save settings: purtcer84@gmail.com, 23912429867-s8or91g0ontvjdt1aeobi4s6uflpsdki.apps.googleusercontent.com, mX9QCErbdXptT5gBUWRWvE7r, Calendar test, 5",
+  "name": "app restore settings on form: UserName, UserPass",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepsEventsSettingsStorageBehaviour.application_is_not_run()"
+  "location": "stepsServerAuthenticationFormBehaviour.form_settings_is_not_run()"
 });
 formatter.result({
-  "duration": 204634351,
+  "duration": 190245879,
   "status": "passed"
 });
 formatter.match({
-  "location": "stepsEventsSettingsStorageBehaviour.I_run_application()"
+  "location": "stepsServerAuthenticationFormBehaviour.I_run_form_settings()"
 });
 formatter.result({
-  "duration": 7614659,
+  "duration": 427886397,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "purtcer84@gmail.com, 23912429867-s8or91g0ontvjdt1aeobi4s6uflpsdki.apps.googleusercontent.com, mX9QCErbdXptT5gBUWRWvE7r, Calendar test, 5",
-      "offset": 19
+      "val": "UserName, UserPass",
+      "offset": 30
     }
   ],
-  "location": "stepsEventsSettingsStorageBehaviour.app_save_settings(String\u003e)"
+  "location": "stepsServerAuthenticationFormBehaviour.app_restor_settings_on_form(String\u003e)"
 });
 formatter.result({
-  "duration": 5118037,
+  "duration": 19461647,
   "status": "passed"
 });
 formatter.scenario({
   "line": 11,
-  "name": "Restore settings",
+  "name": "Save settings",
   "description": "",
-  "id": "eventssettingsstorage;restore-settings",
+  "id": "serverauthenticationformwork;save-settings",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
   "line": 12,
-  "name": "application is not run",
+  "name": "notifications settings form is open",
   "keyword": "Given "
 });
 formatter.step({
   "line": 13,
-  "name": "I run application",
+  "name": "I press save button",
   "keyword": "When "
 });
 formatter.step({
   "line": 14,
-  "name": "app restor settings: purtcer84@gmail.com, 23912429867-s8or91g0ontvjdt1aeobi4s6uflpsdki.apps.googleusercontent.com, mX9QCErbdXptT5gBUWRWvE7r, Calendar test, 5",
+  "name": "app save settings on form: UserName, UserPass",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepsEventsSettingsStorageBehaviour.application_is_not_run()"
+  "location": "stepsServerAuthenticationFormBehaviour.notifications_settings_form_is_open()"
 });
 formatter.result({
-  "duration": 55102,
+  "duration": 16197578,
   "status": "passed"
 });
 formatter.match({
-  "location": "stepsEventsSettingsStorageBehaviour.I_run_application()"
+  "location": "stepsServerAuthenticationFormBehaviour.I_press_save_button()"
 });
 formatter.result({
-  "duration": 34439,
+  "duration": 5714552,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "purtcer84@gmail.com, 23912429867-s8or91g0ontvjdt1aeobi4s6uflpsdki.apps.googleusercontent.com, mX9QCErbdXptT5gBUWRWvE7r, Calendar test, 5",
-      "offset": 21
+      "val": "UserName, UserPass",
+      "offset": 27
     }
   ],
-  "location": "stepsEventsSettingsStorageBehaviour.app_restor_settings(String\u003e)"
+  "location": "stepsServerAuthenticationFormBehaviour.app_save_settings_on_form(String\u003e)"
 });
 formatter.result({
-  "duration": 12635219562,
+  "duration": 1985345,
   "status": "passed"
 });
 });

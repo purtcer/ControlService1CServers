@@ -1,0 +1,14 @@
+Feature: ServerAuthenticationStorage
+
+  As a user
+  I want to save my settings for server authentication
+
+  Scenario: Save settings
+    Given application is not run
+    When I run application
+    Then app save settings: UserName, UserPass
+
+  Scenario: Restore settings
+    Given application is not run
+    When I run application
+    Then app restor settings: UserName, UserPass

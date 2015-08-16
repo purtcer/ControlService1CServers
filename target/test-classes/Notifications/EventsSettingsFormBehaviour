@@ -1,0 +1,14 @@
+Feature: EventsSettingsFormWork
+
+  As a user
+  I want to save my settings for notifications from settings form
+
+  Scenario: Restore settings
+    Given form settings is not run
+    When I run form settings
+    Then app restore settings on form: purtcer84@gmail.com, 23912429867-s8or91g0ontvjdt1aeobi4s6uflpsdki.apps.googleusercontent.com, mX9QCErbdXptT5gBUWRWvE7r, Calendar test, 5
+
+  Scenario: Save settings
+    Given notifications settings form is open
+    When I press save button
+    Then app save settings on form: purtcer84@gmail.com, 23912429867-s8or91g0ontvjdt1aeobi4s6uflpsdki.apps.googleusercontent.com, mX9QCErbdXptT5gBUWRWvE7r, Calendar test, 5

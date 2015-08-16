@@ -1,0 +1,14 @@
+Feature: ServerAuthenticationFormWork
+
+  As a user
+  I want to save my settings for server authentication from settings form
+
+  Scenario: Restore settings
+    Given form settings is not run
+    When I run form settings
+    Then app restore settings on form: UserName, UserPass
+
+  Scenario: Save settings
+    Given notifications settings form is open
+    When I press save button
+    Then app save settings on form: UserName, UserPass

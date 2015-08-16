@@ -1,3 +1,5 @@
+import Notifications.EventsSettingsForm;
+
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -76,11 +78,11 @@ public class mainTread {
 
     static class NotificationButtonClick implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            //EventsSettingsForm eventsSettingsForm = new EventsSettingsForm();
-            //eventsSettingsForm.setResizable(false);
-            //Dimension panelSize = new Dimension(400,215);
-            //eventsSettingsForm.setSize(panelSize);
-            //eventsSettingsForm.setVisible(true);
+            EventsSettingsForm eventsSettingsForm = new EventsSettingsForm();
+            eventsSettingsForm.setResizable(false);
+            Dimension panelSize = new Dimension(400,215);
+            eventsSettingsForm.setSize(panelSize);
+            eventsSettingsForm.setVisible(true);
         }
     }
 

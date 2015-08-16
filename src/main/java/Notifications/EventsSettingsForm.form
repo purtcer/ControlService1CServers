@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Notifications.EventsSettingsForm">
+  <grid id="cbd77" binding="contentPane" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="48" y="54" width="436" height="215"/>
+    </constraints>
+    <properties>
+      <maximumSize width="272" height="215"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="94766" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <hspacer id="98af6">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <grid id="9538f" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="true" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="e7465" class="javax.swing.JButton" binding="Save">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <name value="Сохранить"/>
+                  <text value="&amp;Сохранить"/>
+                </properties>
+              </component>
+              <component id="5723f" class="javax.swing.JButton" binding="Exit">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <name value="Закрыть"/>
+                  <text value="&amp;Закрыть"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="e3588" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="4a3d5" class="javax.swing.JLabel" binding="calendarEMailLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <labelFor value="4cc1e"/>
+              <name value="calendarEMail"/>
+              <text value="&amp;Email"/>
+            </properties>
+          </component>
+          <component id="4cc1e" class="javax.swing.JTextField" binding="calendarEMail">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="c60f9" class="javax.swing.JLabel" binding="calendarClientIdLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <labelFor value="f0204"/>
+              <name value="calendarClientIdLabel"/>
+              <text value="&amp;Client Id"/>
+            </properties>
+          </component>
+          <component id="f0204" class="javax.swing.JTextField" binding="calendarClientId">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <name value="calendarClientId"/>
+              <toolTipText value="Информацию, о том как получить Client Id Google календаря можно найти в интернете."/>
+            </properties>
+          </component>
+          <component id="bf2d5" class="javax.swing.JLabel" binding="calendarClientSecretLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="66" height="26"/>
+              </grid>
+            </constraints>
+            <properties>
+              <labelFor value="f27b2"/>
+              <name value="calendarClientSecretLabel"/>
+              <text value="Client &amp;Secret"/>
+            </properties>
+          </component>
+          <component id="f27b2" class="javax.swing.JTextField" binding="calendarClientSecret">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <name value="calendarClientSecret"/>
+              <toolTipText value="Информацию, о том как получить Client Secret Google календаря можно найти в интернете."/>
+            </properties>
+          </component>
+          <component id="47428" class="javax.swing.JLabel" binding="calendarNameLabel">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <labelFor value="48a47"/>
+              <name value="calendarNameLabel"/>
+              <text value="Имя календаря"/>
+            </properties>
+          </component>
+          <component id="48a47" class="javax.swing.JTextField" binding="calendarName">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <name value="calendarName"/>
+              <toolTipText value="Имя календаря, в котором будут создаваться события.&#10;Рекомендуется задавать отличное от имени вашего основного календаря.&#10;Новый календарь будет создан автоматически, запросив разрешения на создание."/>
+            </properties>
+          </component>
+          <component id="de55d" class="javax.swing.JLabel" binding="calendarTimeCorrectionLabel">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <labelFor value="fe983"/>
+              <name value="calendarTimeCorrectionLabel"/>
+              <text value="Время до уведомления"/>
+            </properties>
+          </component>
+          <component id="fe983" class="javax.swing.JTextField" binding="calendarTimeCorrection">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <name value="calendarTimeCorrection"/>
+              <toolTipText value="События о прошлых уведомлениях не приходят.&#10;Поэтому необходимо создавать события немного наперед."/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
