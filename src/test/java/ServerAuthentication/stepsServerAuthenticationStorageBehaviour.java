@@ -6,6 +6,7 @@ import cucumber.api.java.en.When;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Vector;
 
 public class stepsServerAuthenticationStorageBehaviour {
 

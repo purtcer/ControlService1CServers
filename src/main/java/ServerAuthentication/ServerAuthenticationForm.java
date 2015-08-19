@@ -62,13 +62,6 @@ public class ServerAuthenticationForm extends JDialog {
         dispose();
     }
 
-    //public static void main(String[] args) {
-    //    ServerAuthenticationForm dialog = new ServerAuthenticationForm();
-    //    dialog.pack();
-    //    dialog.setVisible(true);
-    //    System.exit(0);
-    //}
-
     private void fillSettingsOnForm() {
         ServerAuthenticationStorage settingsStorage = new ServerAuthenticationStorage();
         String[] serverAuthentication = settingsStorage.getServerAuthentication();

@@ -1,109 +1,97 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("ServerAuthentication/ServerAuthenticationFormBehaviour");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("ServersSettings/ServersSettingsStorageBehaviour");
 formatter.feature({
   "line": 1,
-  "name": "ServerAuthenticationFormWork",
-  "description": "\r\nAs a user\r\nI want to save my settings for server authentication from settings form",
-  "id": "serverauthenticationformwork",
+  "name": "ServerSettingsStorage",
+  "description": "\r\nAs a user\r\nI want to save my servers settings",
+  "id": "serversettingsstorage",
   "keyword": "Feature"
 });
 formatter.scenario({
   "line": 6,
-  "name": "Restore settings",
+  "name": "Save servers settings",
   "description": "",
-  "id": "serverauthenticationformwork;restore-settings",
+  "id": "serversettingsstorage;save-servers-settings",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
   "line": 7,
-  "name": "form settings is not run",
+  "name": "application is not run",
   "keyword": "Given "
 });
 formatter.step({
   "line": 8,
-  "name": "I run form settings",
+  "name": "I run application",
   "keyword": "When "
 });
 formatter.step({
   "line": 9,
-  "name": "app restore settings on form: UserName, UserPass",
+  "name": "app save settings",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepsServerAuthenticationFormBehaviour.form_settings_is_not_run()"
+  "location": "stepsServersSettingsStorageBehaviour.application_is_not_run()"
 });
 formatter.result({
-  "duration": 190245879,
+  "duration": 456789264,
   "status": "passed"
 });
 formatter.match({
-  "location": "stepsServerAuthenticationFormBehaviour.I_run_form_settings()"
+  "location": "stepsServersSettingsStorageBehaviour.I_run_application()"
 });
 formatter.result({
-  "duration": 427886397,
+  "duration": 56318,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "UserName, UserPass",
-      "offset": 30
-    }
-  ],
-  "location": "stepsServerAuthenticationFormBehaviour.app_restor_settings_on_form(String\u003e)"
+  "location": "stepsServersSettingsStorageBehaviour.app_save_settings()"
 });
 formatter.result({
-  "duration": 19461647,
+  "duration": 9554622,
   "status": "passed"
 });
 formatter.scenario({
   "line": 11,
-  "name": "Save settings",
+  "name": "Restore servers settings",
   "description": "",
-  "id": "serverauthenticationformwork;save-settings",
+  "id": "serversettingsstorage;restore-servers-settings",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
   "line": 12,
-  "name": "notifications settings form is open",
+  "name": "application is not run",
   "keyword": "Given "
 });
 formatter.step({
   "line": 13,
-  "name": "I press save button",
+  "name": "I run application",
   "keyword": "When "
 });
 formatter.step({
   "line": 14,
-  "name": "app save settings on form: UserName, UserPass",
+  "name": "app restor settings",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepsServerAuthenticationFormBehaviour.notifications_settings_form_is_open()"
+  "location": "stepsServersSettingsStorageBehaviour.application_is_not_run()"
 });
 formatter.result({
-  "duration": 16197578,
+  "duration": 43758,
   "status": "passed"
 });
 formatter.match({
-  "location": "stepsServerAuthenticationFormBehaviour.I_press_save_button()"
+  "location": "stepsServersSettingsStorageBehaviour.I_run_application()"
 });
 formatter.result({
-  "duration": 5714552,
+  "duration": 15396,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "UserName, UserPass",
-      "offset": 27
-    }
-  ],
-  "location": "stepsServerAuthenticationFormBehaviour.app_save_settings_on_form(String\u003e)"
+  "location": "stepsServersSettingsStorageBehaviour.app_restor_settings()"
 });
 formatter.result({
-  "duration": 1985345,
+  "duration": 1702912,
   "status": "passed"
 });
 });

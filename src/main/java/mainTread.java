@@ -1,4 +1,6 @@
 import Notifications.EventsSettingsForm;
+import ServerAuthentication.ServerAuthenticationForm;
+import ServersSettings.ServersSettingsForm;
 
 import java.awt.*;
 import java.awt.event.ActionListener;
@@ -71,8 +73,11 @@ public class mainTread {
 
     static class ServersSettingsButtonClick implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-//            ServersSettingsForm serververSettingsForm = new ServersSettingsForm();
-//            serververSettingsForm.show();
+            ServersSettingsForm serverSettingsForm = new ServersSettingsForm();
+            serverSettingsForm.setResizable(false);
+            Dimension panelSize = new Dimension(500,400);
+            serverSettingsForm.setSize(panelSize);
+            serverSettingsForm.setVisible(true);
         }
     }
 
@@ -88,8 +93,11 @@ public class mainTread {
 
     static class AuthenticationButtonClick implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-//            ServerAuthenticationForm serverAuthenticationSettingsForm = new ServerAuthenticationForm();
-//            serverAuthenticationSettingsForm.show();
+            ServerAuthenticationForm serverAuthenticationSettingsForm = new ServerAuthenticationForm();
+            serverAuthenticationSettingsForm.setResizable(false);
+            Dimension panelSize = new Dimension(300,120);
+            serverAuthenticationSettingsForm.setSize(panelSize);
+            serverAuthenticationSettingsForm.setVisible(true);
         }
     }
 
