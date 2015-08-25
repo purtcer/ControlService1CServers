@@ -10,16 +10,16 @@ import java.util.List;
 public class stepsEventsSettingsStorageBehaviour {
     EventsSettingsStorage settingsStorage;
 
-    @Given("^application is not run$")
-    public void application_is_not_run()throws Throwable{
+    @Given("^application not is not run$")
+    public void application_not_is_not_run()throws Throwable{
         if(settingsStorage != null){
             Exception exteptionIcon = new RuntimeException("Приложение уже запущено.");
             throw exteptionIcon;
         }
     }
 
-    @When ("^I run application$")
-    public void I_run_application()throws Throwable{
+    @When ("^I run not application$")
+    public void I_run_not_application()throws Throwable{
         settingsStorage = new EventsSettingsStorage();
     }
 

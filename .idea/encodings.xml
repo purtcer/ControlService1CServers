@@ -2,14 +2,24 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/main/java/Notifications/EventsSettingsForm.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/Notifications/ServerEvents.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/ServerAuthentication/ServerAuthenticationForm.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ServersSettings/ServersSettingsForm.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/ServersSettings/ServersSettingsStorage.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/ServersSettings/ServersTableModel.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/mainTread.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/Notifications/runEventsSettingsFormBehaviour.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/Notifications/runEventsSettingsStorageBehaviour.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/java/Notifications/stepsEventsSettingsFormBehaviour.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/java/Notifications/stepsEventsSettingsStorageBehaviour.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/ServerAuthentication/runServerAuthenticationFormBehaviour.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/ServerAuthentication/runServerAuthenticationStorageBehaviour.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/ServerAuthentication/stepsServerAuthenticationFormBehaviour.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/java/ServerAuthentication/stepsServerAuthenticationStorageBehaviour.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/java/ServersSettings/runServersSettingsStorageBehaviour.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/java/ServersSettings/stepsServersSettingsStorageBehaviour.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/runmainTreadBehaviour.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test/java/stepsmainTreadBehaviour.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/mainTreadBehaviour" charset="UTF-8" />
   </component>
 </project>

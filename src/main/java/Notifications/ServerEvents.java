@@ -80,14 +80,14 @@ public class ServerEvents {
 
     private static Calendar addCalendar() throws IOException {
         Calendar entry = new Calendar();
-        entry.setSummary("Работа сервера");
+        entry.setSummary("Р Р°Р±РѕС‚Р° СЃРµСЂРІРµСЂР°");
         Calendar result = client.calendars().insert(entry).execute();
         return result;
     }
 
     private static Event newEvent() {
         Event event = new Event();
-        event.setSummary("Ошибка сервера");
+        event.setSummary("РћС€РёР±РєР° СЃРµСЂРІРµСЂР°");
         Date startDate = new Date();
         Date endDate = new Date(startDate.getTime() + 3600000);
         DateTime start = new DateTime(startDate, TimeZone.getTimeZone("UTC"));

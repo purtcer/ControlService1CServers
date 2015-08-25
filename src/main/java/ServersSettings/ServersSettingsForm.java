@@ -91,12 +91,12 @@ public class ServersSettingsForm extends JDialog {
         String serverAddressValue = serverAddress.getText();
         if(serverAddressValue.isEmpty()){
             allFilesFilled = false;
-            JOptionPane.showMessageDialog(null, "Не заполнен адрес компьютера сервера 1С:Предприятия.");
+            JOptionPane.showMessageDialog(null, "РќРµ Р·Р°РїРѕР»РЅРµРЅ Р°РґСЂРµСЃ РєРѕРјРїСЊСЋС‚РµСЂР° СЃРµСЂРІРµСЂР° 1РЎ:РџСЂРµРґРїСЂРёСЏС‚РёСЏ.");
         }
         String serverPortValue = serverPort.getText();
         if(serverPortValue.isEmpty()){
             allFilesFilled = false;
-            JOptionPane.showMessageDialog(null, "Не заполнен порт компьютера сервера 1С:Предприятия.");
+            JOptionPane.showMessageDialog(null, "РќРµ Р·Р°РїРѕР»РЅРµРЅ РїРѕСЂС‚ РєРѕРјРїСЊСЋС‚РµСЂР° СЃРµСЂРІРµСЂР° 1РЎ:РџСЂРµРґРїСЂРёСЏС‚РёСЏ.");
         }
 
         return allFilesFilled;

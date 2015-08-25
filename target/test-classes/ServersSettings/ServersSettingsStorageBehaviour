@@ -1,14 +1,14 @@
 Feature: ServerSettingsStorage
 
-  As a user
-  I want to save my servers settings
+#  As a user
+#  I want to save my servers settings
 
   Scenario: Save servers settings
-    Given application is not run
-    When I run application
+    Given application sett is not run
+    When I run application storage
     Then app save settings
 
   Scenario: Restore servers settings
-    Given application is not run
-    When I run application
+    Given application sett is not run
+    When I run application storage
     Then app restor settings

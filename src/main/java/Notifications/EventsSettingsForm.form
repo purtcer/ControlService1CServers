@@ -68,7 +68,7 @@
             <properties>
               <labelFor value="4cc1e"/>
               <name value="calendarEMail"/>
-              <text value="&amp;Email"/>
+              <text value="Email"/>
             </properties>
           </component>
           <component id="4cc1e" class="javax.swing.JTextField" binding="calendarEMail">
@@ -86,7 +86,7 @@
             <properties>
               <labelFor value="f0204"/>
               <name value="calendarClientIdLabel"/>
-              <text value="&amp;Client Id"/>
+              <text value="Client Id"/>
             </properties>
           </component>
           <component id="f0204" class="javax.swing.JTextField" binding="calendarClientId">
@@ -109,7 +109,7 @@
             <properties>
               <labelFor value="f27b2"/>
               <name value="calendarClientSecretLabel"/>
-              <text value="Client &amp;Secret"/>
+              <text value="Client Secret"/>
             </properties>
           </component>
           <component id="f27b2" class="javax.swing.JTextField" binding="calendarClientSecret">

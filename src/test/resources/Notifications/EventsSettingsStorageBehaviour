@@ -1,14 +1,14 @@
 Feature: EventsSettingsStorage
 
-  As a user
-  I want to save my settings for notifications
+#  As a user
+#  I want to save my settings for notifications
 
   Scenario: Save settings
-    Given application is not run
-    When I run application
+    Given application not is not run
+    When I run not application
     Then app save settings: purtcer84@gmail.com, 23912429867-s8or91g0ontvjdt1aeobi4s6uflpsdki.apps.googleusercontent.com, mX9QCErbdXptT5gBUWRWvE7r, Calendar test, 5
 
   Scenario: Restore settings
-    Given application is not run
-    When I run application
+    Given application not is not run
+    When I run not application
     Then app restor settings: purtcer84@gmail.com, 23912429867-s8or91g0ontvjdt1aeobi4s6uflpsdki.apps.googleusercontent.com, mX9QCErbdXptT5gBUWRWvE7r, Calendar test, 5

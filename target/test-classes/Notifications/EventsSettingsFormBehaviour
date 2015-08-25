@@ -1,7 +1,7 @@
 Feature: EventsSettingsFormWork
 
-  As a user
-  I want to save my settings for notifications from settings form
+#  As a user
+#  I want to save my settings for notifications from settings form
 
   Scenario: Restore settings
     Given form settings is not run

@@ -1,16 +1,16 @@
 Feature: MainTreadsOfApp
 
-  As a user
-  I want to see green icon in Windows Tray
-  To know that application is run
+#  As a user
+#  I want to see green icon in Windows Tray
+#  To know that application is run
 
   Scenario: Add green icon to Windows Tray
     Given application is not run
     When I run application
     Then in Windows Tray add green icon
 
-  As a user
-  I want to have 4 items in application menu
+#  As a user
+#  I want to have 4 items in application menu
 
   Scenario: menu of icon in Windows Tray
     Given application is not run
