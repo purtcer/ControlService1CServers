@@ -15,10 +15,7 @@ import com.google.api.services.calendar.CalendarScopes;
 import com.google.api.services.calendar.model.Calendar;
 import com.google.api.services.calendar.model.Event;
 import com.google.api.services.calendar.model.EventDateTime;
-//import com.google.api.client.extensions.servlet.auth.oauth2.AbstractAuthorizationCodeServlet;
-//import java.io.File;
 import java.io.IOException;
-//import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.util.Collections;
 import java.util.Date;
@@ -26,28 +23,28 @@ import java.util.TimeZone;
 
 public class ServerEvents {
 
-    private static final String APPLICATION_NAME = "purtcer84@gmail.com";
+    private static String applicationName;
     private static com.google.api.services.calendar.Calendar client;
     private static HttpTransport httpTransport;
     private static FileDataStoreFactory dataStoreFactory;
     private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
-    //private static final java.io.File DATA_STORE_DIR =
-    //        new java.io.File(new File("").getAbsolutePath() + "\\calendar_sample");
-    private static final String CLIENT_SECRETS = "{\n" +
-            "  \"installed\": {\n" +
-            "    \"client_id\": \"23912429867-s8or91g0ontvjdt1aeobi4s6uflpsdki.apps.googleusercontent.com\",\n" +
-            "    \"client_secret\": \"mX9QCErbdXptT5gBUWRWvE7r\"\n" +
-            "  }\n" +
-            "}";
+    private static String clientSecretsString;
+
+    private void initCalendarSettings(){
+        EventsSettingsStorage settingsStorage = new EventsSettingsStorage();
+        String[] eventsSettings = settingsStorage.getEventsSettings();
+        applicationName = eventsSettings[0];
+        clientSecretsString = "{\n" +
+                "  \"installed\": {\n" +
+                "    \"client_id\": \"" + eventsSettings[1] + "\",\n" +
+                "    \"client_secret\": \"\" + eventsSettings[2] + \"\"\n" +
+                "  }\n" +
+                "}";
+    }
 
     private static Credential authorize() throws Exception {
-        // load client secrets
-//        GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY,
-//            new InputStreamReader(CalendarNotification.class.getResourceAsStream("\\client_secrets.json")));
 
-        GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY,
-                new StringReader(CLIENT_SECRETS));
-
+        GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new StringReader(clientSecretsString));
         // set up authorization code flow
         GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(
                 httpTransport, JSON_FACTORY, clientSecrets,
@@ -63,14 +60,13 @@ public class ServerEvents {
     }
 
     public ServerEvents(){
+        initCalendarSettings();
         try {
             // initialize the transport
             httpTransport = GoogleNetHttpTransport.newTrustedTransport();
-            // initialize the data store factory
-            //dataStoreFactory = new FileDataStoreFactory(DATA_STORE_DIR);
             Credential credential = authorize();
             client = new com.google.api.services.calendar.Calendar.Builder(httpTransport,
-                    JSON_FACTORY, credential).setApplicationName(APPLICATION_NAME).build();
+                    JSON_FACTORY, credential).setApplicationName(applicationName).build();
             Calendar calendar = addCalendar();
             addEvent(calendar);
         }
@@ -84,14 +80,14 @@ public class ServerEvents {
 
     private static Calendar addCalendar() throws IOException {
         Calendar entry = new Calendar();
-        entry.setSummary("Calendar for Testing 3");
+        entry.setSummary("Работа сервера");
         Calendar result = client.calendars().insert(entry).execute();
         return result;
     }
 
     private static Event newEvent() {
         Event event = new Event();
-        event.setSummary("New Event");
+        event.setSummary("Ошибка сервера");
         Date startDate = new Date();
         Date endDate = new Date(startDate.getTime() + 3600000);
         DateTime start = new DateTime(startDate, TimeZone.getTimeZone("UTC"));
